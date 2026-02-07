@@ -1,0 +1,43 @@
+# Environment variables (contains API keys)
+.env
+backend/.env
+frontend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.vite/
+build/
+
+# Database
+*.db
+data/*.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Railway
+.railway/
+
+# Temporary files
+*.tmp
+*.temp
+nul
