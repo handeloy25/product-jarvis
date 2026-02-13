@@ -31,7 +31,7 @@ import LeadershipGuidePage from './pages/LeadershipGuidePage'
 import BusinessUnitsPage from './pages/BusinessUnitsPage'
 import BUDashboardPage from './pages/BUDashboardPage'
 
-const API_BASE = 'http://localhost:8001/api'
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8001/api'
 
 const NAV_GROUPS = [
   {

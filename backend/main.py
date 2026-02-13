@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from database import init_db
 from routers import positions, products, calculator, learn, assistant, knowledge, valuations, software, service_departments, personas, services, reports, admin, business_units, auth_router
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
@@ -12,9 +13,20 @@ app = FastAPI(
     version="0.1.0"
 )
 
+# Allow both local and production frontend URLs
+allowed_origins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+]
+
+# Add production frontend URL if set
+frontend_url = os.getenv("FRONTEND_URL")
+if frontend_url:
+    allowed_origins.append(frontend_url)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
