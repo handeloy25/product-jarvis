@@ -31,7 +31,8 @@ import LeadershipGuidePage from './pages/LeadershipGuidePage'
 import BusinessUnitsPage from './pages/BusinessUnitsPage'
 import BUDashboardPage from './pages/BUDashboardPage'
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8001/api'
+// Temporary hardcode for testing - will fix env var after
+const API_BASE = import.meta.env.VITE_API_URL || 'https://product-jarvis-production.up.railway.app/api'
 
 const NAV_GROUPS = [
   {
